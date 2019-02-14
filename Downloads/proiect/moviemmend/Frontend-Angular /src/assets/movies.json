@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1,
+    "name": "Venom",
+    "releaseDate": "5 Octombrie, 2018",
+    "genres": "Actiune Drama",
+    "description": "Descriere",
+    "starRating": 3.8,
+    "imageUrl": "./assets/images/venom.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Avengers",
+    "releaseDate": "March 18, 2016",
+    "genres": "Actiune ",
+    "description": "Descriere",
+    "starRating": 4.2,
+    "imageUrl": "./assets/images/avengers.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Hammer",
+    "releaseDate": "May 21, 2016",
+    "genres": "Actiune Drama",
+    "description": "Curved claw steel hammer",
+    "starRating": 4.8,
+    "imageUrl": "https://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png"
+  },
+  {
+    "id": 8,
+    "name": "Saw",
+    "releaseDate": "May 15, 2016",
+    "genres": "Actiune Drama",
+    "description": "15-inch steel blade hand saw",
+    "starRating": 3.7,
+    "imageUrl": "https://openclipart.org/image/300px/svg_to_png/27070/egore911_saw.png"
+  },
+  {
+    "id": 10,
+    "name": "Video Game Controller",
+    "releaseDate": "October 15, 2015",
+    "genres": "Actiune Drama",
+    "description": "Standard two-button video game controller",
+    "starRating": 4.6,
+    "imageUrl": "https://openclipart.org/image/300px/svg_to_png/120337/xbox-controller_01.png"
+  }
+  
+]

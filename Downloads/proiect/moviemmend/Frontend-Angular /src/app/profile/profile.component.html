@@ -1,0 +1,40 @@
+
+<section id="text1">
+<h2>Bine ai venit pe Moviemmend!</h2>
+<h4>Cauta 3 filme pe care le-ai vazut pentru a putea face recomandarea</h4>
+</section>
+
+
+
+<section id="searches" class="container">  
+     <form class="form-inline formx3" [formGroup]="searchForm" (ngSubmit)="onSubmit1()">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+        formControlName="search1">
+        <button class="btn-info btn-rounded my-2 my-sm-0" type="search">Search</button>
+      </form>
+      <p id="label1">Film: {{name1}}</p>
+      <form class="form-inline formx3" [formGroup]="searchForm" (ngSubmit)="onSubmit2()">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+          formControlName="search2">
+          <button class="btn-info btn-rounded my-2 my-sm-0" type="search">Search</button>
+        </form>
+      <p id="label1">Film: {{name2}}</p>
+      <form class="form-inline formx3" [formGroup]="searchForm" (ngSubmit)="onSubmit3()">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+          formControlName="search3">
+            <button class="btn-info btn-rounded my-2 my-sm-0" type="search">Search</button>
+          </form>
+      <p id="label1">Film: {{name3}}</p>
+</section>
+
+<section id="slider">
+    <h3>Acum alege un interval de ani din care vrei sa iti fie recomandate filmele</h3>
+    <br><br>
+    <ng5-slider [(value)]="value" [(highValue)]="highValue" [options]="options"></ng5-slider>
+
+</section>
+
+<div id="sub">
+<input class="btn btn-primary"  type="button" (click)='onSubmitFinal()' value="Submit">
+</div>
+

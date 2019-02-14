@@ -1,0 +1,16 @@
+.btn-outline-secondary {
+    background-color: rgb(255, 255, 255) !important;
+    color: #33b6e5ce !important;
+    border:2px solid #33b6e5ce !important;
+
+}
+
+.row {
+    padding-top: 1rem;
+}
+
+.card {
+    margin-top: 3rem;
+    border:1px solid #33b6e5ce !important;
+}
+

@@ -1,0 +1,42 @@
+
+<!-- Search form -->
+<div class="container">
+<div class='card'>
+  <div class='card-header'>
+    {{pageTitle}}
+  </div>
+  <div class='card-body'>
+    <div class='table-responsive'>
+      <table class='table'
+             *ngIf='movies && movies.length'>
+        <tbody>
+          <tr *ngFor='let movie of filteredMovies'>
+            <td>
+              <img 
+                   [src]='movie.imageUrl'
+                   [title]='movie.name'
+                   [style.width.px]='imageWidth'
+                   [style.margin.px]='imageMargin'>
+            </td>
+            <td>
+              <a class="text2" [routerLink]="['/profile-movies', movie.id]">
+                {{ movie.name }}
+              </a>
+             <div>{{movie.genres}}</div>
+             <div class="text3">{{ movie.releaseDate }} </div>
+            
+              <pm-star [rating]='movie.starRating'>
+              </pm-star>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div *ngIf='errorMessage'
+     class='alert alert-danger'>
+  Error: {{ errorMessage }}
+</div>
+</div>

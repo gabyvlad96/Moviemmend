@@ -1,0 +1,92 @@
+<div class="container h-100">
+<div class='card h-100'
+     *ngIf='movie'>
+  <div class='card-header'>
+    {{movie.name}}
+  </div>
+
+  <div class='card-body'>
+    <div class='row'>
+      <div class='col-md-8'>
+        <div class='row'>
+          <div class='col-md-4'>Nume:</div>
+          <div class='col-md-8'>{{movie.name}}</div> 
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>Descriere:</div>
+          <div class='col-md-8'>{{movie.description}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>Data lansarii:</div>
+          <div class='col-md-8'>{{movie.releaseDate}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>Nota:</div>
+          <div class='col-md-8'>
+            <pm-star [rating]='movie.starRating'>
+            </pm-star>
+          </div>
+        </div>
+        <div class='row'>
+            <div class='col-md-4'>Ai vazut filmul?</div>
+            <div class='col-md-8'><div class="form-check">
+                <input class="form-check-input" type="checkbox"
+               (click)="checkValue($event)">
+              </div>
+            </div>
+          </div>
+          <div *ngIf="showTextInput" class='row'>
+              <div class='col-md-4'>Acorda-i o nota!</div>
+              <div class='col-md-8'>
+                  <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" [value]="1"  [(ngModel)]="radioData">
+                      <label class="form-check-label" for="inlineRadio1">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" [value]="2"  [(ngModel)]="radioData">
+                      <label class="form-check-label" for="inlineRadio2">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" [value]="3"  [(ngModel)]="radioData">
+                      <label class="form-check-label" for="inlineRadio3">3</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" [value]="4"  [(ngModel)]="radioData">
+                        <label class="form-check-label" for="inlineRadio4">4</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" [value]="5"  [(ngModel)]="radioData">
+                          <label class="form-check-label" for="inlineRadio5">5</label>
+                    </div>
+
+              </div>
+            </div>  
+            <div *ngIf="showTextInput" class='row'>
+              <div class='col-md-4'></div>
+              <div class='col-md-8'>                  
+                <div class="form-check form-check-inline">
+                <button type="button" class="btn btn-primary btn-xs" (click)="sendRating($event)" >Trimite</button>
+
+           </div>
+              </div>
+            </div>  
+      </div>
+
+      <div class='col-md-4'>
+        <img class='center-block img-responsive'
+             [style.width.px]='200'
+             [style.margin.px]='2'
+             [src]='movie.imageUrl'
+             [title]='movie.name'>
+      </div>
+    </div>
+  </div>
+
+  <div class='card-footer'>
+    <button class='btn btn-outline-secondary'
+            (click)='onBack()'>
+      <i class='fa fa-chevron-left'></i> Back
+    </button>
+  </div>
+</div>
+</div>

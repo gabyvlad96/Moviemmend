@@ -1,0 +1,18 @@
+.navbar-brand {
+  margin-left: 10%;
+  margin-right: 8%;
+}
+.nav-link {
+  font-size: large;
+}
+
+#signup {
+  float: right;
+}
+
+
+.not-active {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+}
